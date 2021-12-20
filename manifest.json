@@ -1,0 +1,36 @@
+{
+    "name": "Sheeter",
+    "version": "1.0",
+    "description": "The best shiet eva",
+    "permissions": ["identity", "https://docs.google.com/spreadsheets/*"],
+    "author": "Gita",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "content_scripts": [{
+      "matches": ["file:///*"],
+      "js"     : ["popup.js"]
+    }],
+    "browser_action": {
+      "default_popup": "pop.html",
+      "default_icon": "images/sheeter-logo.png",
+      "default_title": "Sheet extension"
+    },
+   "oauth2": {
+      "client_id": "22505639054-pcl24p3pdtp3eb6k46krfujc1lh7tq12.apps.googleusercontent.com",
+      "scopes": [
+          "openid", 
+          "email", 
+          "profile",
+          "https://www.googleapis.com/auth/spreadsheets",          
+          "https://www.googleapis.com/auth/drive",
+          "https://www.googleapis.com/auth/drive.readonly",
+          "https://www.googleapis.com/auth/drive.file",
+          "https://www.googleapis.com/auth/spreadsheets.readonly"
+     ]},
+    
+     "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com/; object-src 'self'",
+
+    "manifest_version": 2
+}
