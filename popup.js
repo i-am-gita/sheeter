@@ -28,8 +28,16 @@ chrome.identity.getAuthToken({ 'interactive': true }, getToken);
       .then((response) => response.json())
       .then(function(data) {
         console.log(data)
-      });
+      }, callback);
    }
+
+function callback() {
+    if (chrome.runtime.lastError) {
+        console.log(chrome.runtime.lastError.message);
+    } else {
+        // Tab exists
+    }
+}
 
    document.getElementById('generate').onclick = function() {
 
@@ -69,4 +77,3 @@ chrome.identity.getAuthToken({ 'interactive': true }, getToken);
 
      }
  
-   

@@ -3,29 +3,75 @@
 
 <head>
   <meta name="google-signin-client_id"
-    content="22505639054-pcl24p3pdtp3eb6k46krfujc1lh7tq12.apps.googleusercontent.com">
-  <style>
-    body {
-      width: 100px;
-      height: 100px
-    }
-
-    button {
-      background-color: #577FC6;
-      color: #ffffff;
-      margin: 0 auto;
-      border: 1px solid #000000;
-      display: block;
-      width: 80px;
-    }
-  </style>
+        content="22505639054-pcl24p3pdtp3eb6k46krfujc1lh7tq12.apps.googleusercontent.com">
+  <meta charset="utf-8">
+  <title>Sheeter</title>
+  <!-- Scripts -->
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  <div id="container"></div>
 
-  <button id="generate">Spreadsheets</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <button id="generate">Source spreadsheet</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        Sheet
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        Columns
+      </div>
+      <div class="col-sm">
+        Rows
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col align-self-center">
+        Switch
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <button id="generate2">Destination spreadsheet</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        Sheet
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        Columns
+      </div>
+      <div class="col-sm">
+        Rows
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col align-self-center">
+        Transfer
+      </div>
+    </div>
+  </div>
 
   <script src="popup.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
